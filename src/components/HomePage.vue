@@ -1,15 +1,23 @@
 <template>
-  <div class="button">
-    <button> un bouton ici </button>
+  <div class="container">
+  <img src="../../public/assets/logo.gif"/>
+    <button v-on:click="lauchScan">Scan un truc pour voir</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'HomePage',
   props: {
     msg: String
-  }
+  },
+  methods: {
+    lauchScan() {
+      this.$router.push({
+        name: "Scan"
+      });
+    },
+  },
 }
 </script>
 
@@ -30,3 +38,4 @@ a {
   color: #42b983;
 }
 </style>
+

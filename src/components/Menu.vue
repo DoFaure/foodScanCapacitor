@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar box" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-
+        <a class="navbar-item animated" href="/">
+            <h1>FoodScan</h1>
+        </a>
       <a
         role="button"
         class="navbar-burger"
@@ -21,36 +23,16 @@
       <div class="navbar-start">
         <router-link class="navbar-item" to="/"> Accueil </router-link>
 
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            Composteurs
-          </a>
-
-          <div class="navbar-dropdown">
-            <router-link class="navbar-item" to="/composters">
-              Liste
-            </router-link>
-            <a class="navbar-item">
-              Carte
-            </a>
-            <hr class="navbar-divider" />
-            <router-link class="navbar-item" to="/about">
-              A propos
-            </router-link>
-            <a
-              class="navbar-item"
-              href="https://github.com/alexsedlex/org.univ.compostmap"
-              target="github"
-            >
-              Voir le code source
-            </a>
-          </div>
+        <div class="navbar-item">
+        <router-link class="navbar-item" to="/scan">
+            Scanner un produit
+        </router-link>
         </div>
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item copyright">
-          Created by Univ-Nantes &copy;
+          Created by Dorian & Pierre &copy;
         </div>
       </div>
     </div>

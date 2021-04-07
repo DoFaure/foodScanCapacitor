@@ -1,7 +1,7 @@
 <template>
   <div class="container">
   <img src="../../public/assets/logo.gif"/>
-    <button v-on:click="lauchScan">Scan un truc pour voir</button>
+    <button class="button is-info" v-on:click="lauchScan">Scanner un produit</button>
   </div>
 </template>
 

@@ -1,10 +1,10 @@
 <template>
   <div>
+    <h3>Scanner un produit</h3>
     <StreamBarcodeReader
       @decode="(a, b, c) => onDecode(a, b, c)"
       @loaded="() => onLoaded()"
     ></StreamBarcodeReader>
-    Input Value: {{ text || "Nothing" }}
   </div>
 </template>
 
@@ -18,7 +18,6 @@ export default {
   },
   data() {
     return {
-      text: "",
       id: null,
     };
   },
@@ -27,18 +26,22 @@ export default {
   },
   methods: {
     onDecode(a, b, c) {
-      console.log(a, b, c);
-      this.text = a;
+      console.log(a,b,c);
+      console.log(a);
+      console.log(b);
+      console.log(c);
       if (this.id) clearTimeout(this.id);
       this.id = setTimeout(() => {
-        if (this.text === a) {
-          this.text = "";
-        }
-      }, 5000);
+        this.$router.push({
+          name: "ProductDetail",
+          params: { id: a }
+        });
+      }, 500);
+      
     },
     onLoaded() {
       console.log("load");
-    },
+    }
   },
 };
 </script>

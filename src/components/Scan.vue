@@ -26,18 +26,11 @@ export default {
   },
   methods: {
     onDecode(a, b, c) {
-      console.log(a,b,c);
-      console.log(a);
-      console.log(b);
-      console.log(c);
       if (this.id) clearTimeout(this.id);
-      this.id = setTimeout(() => {
-        this.$router.push({
-          name: "ProductDetail",
-          params: { id: a }
-        });
-      }, 500);
-      
+      this.$router.push({
+        name: "ProductDetail",
+        params: { id: a+b+c }
+      });
     },
     onLoaded() {
       console.log("load");

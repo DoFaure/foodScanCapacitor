@@ -15,7 +15,21 @@
             <div class="media-content">
                 <p class="title is-4">{{ product.product_name_fr }}</p>
                 <p class="title is-6">Marque : {{ product.brands }}</p>
-                <p class="title is-6">Nutriscore : {{ product.nutriscore_grade }}</p>
+                <div v-if="product.nutriscore_grade === 'a'">
+                    <img class="nutri-score" src="../../public/assets/nutri-a.png" />
+                </div>
+                <div v-else-if="product.nutriscore_grade === 'b'">
+                    <img class="nutri-score" src="../../public/assets/nutri-a.png" />
+                </div>
+                <div v-else-if="product.nutriscore_grade === 'c'">
+                    <img class="nutri-score" src="../../public/assets/nutri-c.png" />
+                </div>
+                <div v-else-if="product.nutriscore_grade === 'd'">
+                    <img class="nutri-score" src="../../public/assets/nutri-d.png" />
+                </div>
+                <div v-else>
+                    <img class="nutri-score" src="../../public/assets/nutri-e.png" />
+                </div>
             </div>
             </div>
         </div>
@@ -41,5 +55,8 @@ img {
     max-height: 350px;
     width: auto;
     margin: auto;
+}
+.nutri-score{
+    max-width: 200px;
 }
 </style>

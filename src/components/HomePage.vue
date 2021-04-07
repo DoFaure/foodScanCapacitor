@@ -1,7 +1,11 @@
 <template>
   <div class="container">
-  <img src="../../public/assets/logo.gif"/>
-    <button class="button is-info" v-on:click="lauchScan">Scanner un produit</button>
+    <div>
+      <img src="../../public/assets/logo.gif"/>
+    </div>
+    <div>
+      <button class="button is-info is-hidden-desktop" v-on:click="lauchScan">Scanner un produit</button>
+    </div>
   </div>
 </template>
 

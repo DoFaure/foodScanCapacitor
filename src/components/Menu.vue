@@ -28,6 +28,13 @@
             Scanner un produit
         </router-link>
         </div>
+
+        <div class="navbar-item">
+        <router-link class="navbar-item" to="/products">
+            Favoris
+        </router-link>
+        </div>
+
       </div>
 
       <div class="navbar-end">
